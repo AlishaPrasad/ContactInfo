@@ -1,0 +1,10 @@
+D:\AngularSample\ContactInfo\bin\Debug\netcoreapp2.0\ContactInfo.deps.json
+D:\AngularSample\ContactInfo\bin\Debug\netcoreapp2.0\ContactInfo.runtimeconfig.json
+D:\AngularSample\ContactInfo\bin\Debug\netcoreapp2.0\ContactInfo.runtimeconfig.dev.json
+D:\AngularSample\ContactInfo\bin\Debug\netcoreapp2.0\ContactInfo.dll
+D:\AngularSample\ContactInfo\bin\Debug\netcoreapp2.0\ContactInfo.pdb
+D:\AngularSample\ContactInfo\obj\Debug\netcoreapp2.0\ContactInfo.csproj.CoreCompileInputs.cache
+D:\AngularSample\ContactInfo\obj\Debug\netcoreapp2.0\ContactInfo.AssemblyInfoInputs.cache
+D:\AngularSample\ContactInfo\obj\Debug\netcoreapp2.0\ContactInfo.AssemblyInfo.cs
+D:\AngularSample\ContactInfo\obj\Debug\netcoreapp2.0\ContactInfo.dll
+D:\AngularSample\ContactInfo\obj\Debug\netcoreapp2.0\ContactInfo.pdb

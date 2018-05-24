@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ContactService } from './contact.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Contact Information';
+  contacts: string[];   
+  constructor(private contactService: ContactService)  
+  {  
+    this.contacts = [];  
+    this.populateItems();  
+    }  
+  
+    populateItems()  
+    {  
+      this.contactService.getContactList().subscribe(res =>{  
+        this.contacts = res;  
+      })  
+    }  
 }
