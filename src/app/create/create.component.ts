@@ -16,16 +16,16 @@ export class CreateComponent implements OnInit {
 
   createForm() {
     this.angForm = this.fb.group({
-      firstname: ['', Validators.required ],
-      lastname: ['', Validators.required ],
+      firstName: ['', Validators.required ],
+      lastName: ['', Validators.required ],
       email: ['', Validators.required ],
-      phonenumber: ['', Validators.required ],
+      phoneNumber: ['', Validators.required ],
       status: ['', Validators.required ]
    });
   }
 
-  addContact(firstname, lastname, email, phonenumber, status) {
-      this.contactService.addContact(firstname, lastname, email, phonenumber, status);
+  addContact(firstName, lastName, email, phoneNumber, status) {
+      this.contactService.addContact(firstName, lastName, email, phoneNumber, status);
   }
   
   ngOnInit() {

@@ -1,18 +1,20 @@
-<div style="text-align:center">
+<div style="text-align:center" class="container" id="main">
   <h1>
     {{title}}
   </h1>
-  <li *ngFor="let contact of contacts">  
-    {{contact}}  
-  </li>  
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
         <li class="active">
-          <a routerLink="create" routerLinkActive="active">
-            Add contacts
+          <a routerLink="contacts" routerLinkActive="active">
+            Contacts
           </a>
         </li>    
+        <li>
+          <a routerLink="about" routerLinkActive="active">
+            About
+          </a>
+        </li>   
       </ul>
     </div>
   </nav>

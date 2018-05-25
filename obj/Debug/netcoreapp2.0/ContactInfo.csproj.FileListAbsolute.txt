@@ -8,3 +8,4 @@ D:\AngularSample\ContactInfo\obj\Debug\netcoreapp2.0\ContactInfo.AssemblyInfoInp
 D:\AngularSample\ContactInfo\obj\Debug\netcoreapp2.0\ContactInfo.AssemblyInfo.cs
 D:\AngularSample\ContactInfo\obj\Debug\netcoreapp2.0\ContactInfo.dll
 D:\AngularSample\ContactInfo\obj\Debug\netcoreapp2.0\ContactInfo.pdb
+D:\AngularSample\ContactInfo\obj\Debug\netcoreapp2.0\ContactInfo.csprojResolveAssemblyReference.cache

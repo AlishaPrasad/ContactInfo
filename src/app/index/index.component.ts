@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactService } from '../contact.service';
+import { IContact } from '../models/contact.model';
 
 @Component({
   selector: 'app-index',
@@ -6,10 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+  contacts: any;
 
-  constructor() { }
+  constructor(private contactService: ContactService) { 
+  }
 
   ngOnInit() {
+    this.getContacts();
   }
+
+  getContacts(){
+    this.contactService.getContactList().subscribe(res =>{  
+      this.contacts = res;  
+    });  
+  }
+
+  deleteContact(contactId) {
+    this.contactService.deleteContact(contactId).subscribe(res => {
+      console.log('Deleted');
+    });
+}
 
 }
