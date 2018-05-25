@@ -1,0 +1,11 @@
+F:\alisha\AngularSample\ContactInfo\bin\MCD\Debug\netcoreapp2.0\ContactInfo.deps.json
+F:\alisha\AngularSample\ContactInfo\bin\MCD\Debug\netcoreapp2.0\ContactInfo.runtimeconfig.json
+F:\alisha\AngularSample\ContactInfo\bin\MCD\Debug\netcoreapp2.0\ContactInfo.runtimeconfig.dev.json
+F:\alisha\AngularSample\ContactInfo\bin\MCD\Debug\netcoreapp2.0\ContactInfo.dll
+F:\alisha\AngularSample\ContactInfo\bin\MCD\Debug\netcoreapp2.0\ContactInfo.pdb
+F:\alisha\AngularSample\ContactInfo\obj\MCD\Debug\netcoreapp2.0\ContactInfo.csprojAssemblyReference.cache
+F:\alisha\AngularSample\ContactInfo\obj\MCD\Debug\netcoreapp2.0\ContactInfo.csproj.CoreCompileInputs.cache
+F:\alisha\AngularSample\ContactInfo\obj\MCD\Debug\netcoreapp2.0\ContactInfo.AssemblyInfoInputs.cache
+F:\alisha\AngularSample\ContactInfo\obj\MCD\Debug\netcoreapp2.0\ContactInfo.AssemblyInfo.cs
+F:\alisha\AngularSample\ContactInfo\obj\MCD\Debug\netcoreapp2.0\ContactInfo.dll
+F:\alisha\AngularSample\ContactInfo\obj\MCD\Debug\netcoreapp2.0\ContactInfo.pdb

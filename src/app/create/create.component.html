@@ -3,29 +3,54 @@
     {{ title }}
   </div>
   <div class="panel-body">
-    <form>
+    <form [formGroup]="angForm" novalidate>
       <div class="form-group">
         <label class="col-md-4">First Name</label>
-        <input type="text" class="form-control" name="first_name"/>
+        <input type="text" class="form-control" formControlName="firstname" #firstname />
+      </div>
+      <div *ngIf="angForm.controls['firstname'].invalid && (angForm.controls['firstname'].dirty || angForm.controls['firstname'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['firstname'].errors.required">
+          First Name is required.
+        </div>
       </div>
       <div class="form-group">
         <label class="col-md-4">Last Name</label>
-        <input type="text" class="form-control" name="last_name"/>
+        <input type="text" class="form-control"  formControlName="lastname" #lastname />
+      </div>
+      <div *ngIf="angForm.controls['lastname'].invalid && (angForm.controls['lastname'].dirty || angForm.controls['lastname'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['lastname'].errors.required">
+          Last Name is required.
+        </div>
       </div>
       <div class="form-group">
         <label class="col-md-4">Email</label>
-        <input type="text" class="form-control" name="email"/>
+        <input type="text" class="form-control" formControlName="email" #email />
+      </div>      
+      <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['email'].errors.required">
+          Email is required.
+        </div>
       </div>
       <div class="form-group">
         <label class="col-md-4">Phone Number</label>
-        <input type="text" class="form-control" name="phone_number"/>
+        <input type="text" class="form-control" formControlName="phonenumber" #phonenumber />
+      </div>
+      <div *ngIf="angForm.controls['phonenumber'].invalid && (angForm.controls['phonenumber'].dirty || angForm.controls['phonenumber'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['phonenumber'].errors.required">
+          Phone Number is required.
+        </div>
       </div>
       <div class="form-group">
         <label class="col-md-4">Status</label>
-        <input type="text" class="form-control" name="status"/>
+        <input type="text" class="form-control" formControlName="status" #status />
+      </div>
+      <div *ngIf="angForm.controls['status'].invalid && (angForm.controls['status'].dirty || angForm.controls['status'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['status'].errors.required">
+          Phone Number is required.
+        </div>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Add</button>
+        <button (click)="addContact(firstname.value, lastname.value, email.value, phonenumber.value, status.value)" [disabled]="angForm.pristine || angForm.invalid" class="btn btn-primary">Add</button>
       </div>
     </form>
   </div>

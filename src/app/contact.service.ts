@@ -13,6 +13,19 @@ export class ContactService {
   contactList : Contact[];
   constructor(private http : Http) { }
  
+  addContact(firstname, lastname, email, phonenumber, status) {
+    const uri = 'http://localhost:5000/contact/add';
+    const obj = {
+      firstname: firstname, 
+      lastname: lastname,
+      email: email, 
+      phonenumber: phonenumber, 
+      status: status
+    };
+    this.http.post(uri, obj)
+        .subscribe(res => console.log('Done'));
+  }
+
   postContact(emp : Contact){
     var body = JSON.stringify(emp);
     var headerOptions = new Headers({'Content-Type':'application/json'});
