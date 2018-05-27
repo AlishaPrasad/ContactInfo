@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ContactService } from './../contact.service';
 import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
+import { Contact } from '../models/contact.model';
 
 @Component({
   selector: 'app-edit',
@@ -10,9 +11,8 @@ import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
 })
 export class EditComponent implements OnInit {
 
-  contact: any;
+  contact: Contact;
   angForm: FormGroup;
-  editTitle: 'Edit Contact';
   constructor(private route: ActivatedRoute, private router: Router, private contactService: ContactService, private fb: FormBuilder) {
     this.createForm();
    }
@@ -27,16 +27,19 @@ export class EditComponent implements OnInit {
    });
   }
 
-  updateContact(firstName, lastName, email, phoneNumber, status) {
+  updateContact() {
     this.route.params.subscribe(params => {
-    this.contactService.updateContact(params['id'], firstName, lastName, email, phoneNumber, status);
-    this.router.navigate(['contacts']);
-  });
-}
+    this.contactService.updateContact(this.contact)
+      .subscribe(res=> {
+        this.router.navigate(['contacts']);}
+      )
+    });
+  }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.contact = this.contactService.editContact(params['id']).subscribe(res => {
+      this.contactService.editContact(params['id']).subscribe(res => {
+        console.log(res);
         this.contact = res;
       });
     });

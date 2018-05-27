@@ -1,25 +1,30 @@
-<a routerLink="/create" class="btn btn-primary">Create Contact</a>
-<table class="table table-hover">
-  <thead>
-  <tr>
-      <td>First Name</td>
-      <td>Last Name</td>
-      <td>Email</td>
-      <td>Phone Number</td>
-      <td>Status</td>
-      <td colspan="2">Actions</td>
-  </tr>
-  </thead>
+<div class="page-header">
+    <a routerLink="/create" class="btn btn-primary">Create New Contact</a>
+</div>
+<div *ngIf="!contacts.length; else contactTemplate" class="page-header">
+    No contacts to display!
+</div>
+<ng-template #contactTemplate>
+    <table class="table table-hover text-center panel panel-primary">
+        <thead class="panel-heading">
+            <tr>
+                <th class=" text-center">Name</th>
+                <th class=" text-center">Email</th>
+                <th class=" text-center">Phone Number</th>
+                <th class=" text-center">Status</th>
+                <th colspan="2" class=" text-center">Actions</th>
+            </tr>
+        </thead>
 
-  <tbody>
-      <tr *ngFor="let contact of contacts">
-          <td>{{ contact.firstName }}</td>
-          <td>{{ contact.lastName }}</td>
-          <td>{{ contact.email }}</td>
-          <td>{{ contact.phoneNumber }}</td>
-          <td>{{ contact.status }}</td>
-          <td><a [routerLink]="['/edit', contact.contactId]" class="btn btn-primary">Edit</a></td>
-          <td><button (click)="deleteContact(contact.contactId)"  class="btn btn-danger">Delete</button></td>
-      </tr>
-  </tbody>
-</table>
+        <tbody>
+            <tr *ngFor="let contact of contacts">
+                <td>{{ contact.firstName }} {{ contact.lastName }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.phoneNumber }}</td>
+                <td>{{ contact.status }}</td>
+                <td><a [routerLink]="['/edit', contact.contactId]" class="btn btn-primary">Edit</a></td>
+                <td><button (click)="deleteContact(contact.contactId)"  class="btn btn-danger">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>

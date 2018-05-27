@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { IndexComponent } from './index/index.component';
 import { AboutComponent } from './about/about.component';
@@ -7,7 +6,7 @@ import { AboutComponent } from './about/about.component';
 export const appRoutes: Routes = [
   {
     path: 'create',
-    component: CreateComponent
+    component: EditComponent
   },
   {
     path: 'edit/:id',
