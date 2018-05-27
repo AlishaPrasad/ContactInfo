@@ -1,7 +1,7 @@
 <div class="page-header">
     <a routerLink="/create" class="btn btn-primary">Create New Contact</a>
 </div>
-<div *ngIf="!contacts.length; else contactTemplate" class="page-header">
+<div *ngIf="contacts && !contacts.length; else contactTemplate" class="page-header">
     No contacts to display!
 </div>
 <ng-template #contactTemplate>

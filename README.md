@@ -4,6 +4,7 @@ GENERAL USAGE NOTES
 --------------------
 - My Contacts can be used to add, update, view and delete information about a contact
 - Beware that clicking Delete will not ask for confirmation and that there is no undo once a contact is deleted. You must be particularly careful while doing so or to temporarily inactivate a contact you can set the status of the contact to 'Inactive'.
+- While adding or updating a contact make sure to fill up all required fields to enable the Add or Update button and type the email address in the correct format i.e example@example.com
 ---------------------------------------------------------------------------------------------------------
 
 Installation instructions

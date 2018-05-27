@@ -21,7 +21,7 @@ export class EditComponent implements OnInit {
     this.angForm = this.fb.group({
       firstName: ['', Validators.required ],
       lastName: ['', Validators.required ],
-      email: ['', Validators.required ],
+      email: ['', [Validators.required , Validators.pattern('^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$')]],
       phoneNumber: ['', Validators.required ],
       status: ['', Validators.required ]
    });
@@ -39,7 +39,6 @@ export class EditComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.contactService.editContact(params['id']).subscribe(res => {
-        console.log(res);
         this.contact = res;
       });
     });

@@ -1,4 +1,4 @@
-<div class="col-xs-6">
+<div class="col-xs-6" *ngIf="contact">
   <div class="panel panel-primary">
   <div class="panel-heading" *ngIf="!contact.contactId; else editTitle">
     Add Contact
@@ -29,17 +29,20 @@
         </div>
       </div>
       <div class="form-group">
-        <label class="col-md-4">Email</label>
+        <label class="col-md-4">Email Address</label>
         <input type="text" maxlength="5000" placeholder="e.g. davy.jones@example.com" class="form-control" formControlName="email" #email [(ngModel)] = "contact.email"/>
       </div>      
       <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)" class="alert alert-danger">
         <div *ngIf="angForm.controls['email'].errors.required">
-          Email is required.
+          Email Address is required.
         </div>
+        <div *ngIf="angForm.controls['email'].errors.pattern">
+            Invalid email address.
+          </div>
       </div>
       <div class="form-group">
         <label class="col-md-4">Phone Number</label>
-        <input type="text" maxlength="10" placeholder="e.g. 9876543210" class="form-control" formControlName="phoneNumber" #phoneNumber [(ngModel)] = "contact.phoneNumber"/>
+        <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" placeholder="e.g. 9876543210" class="form-control" formControlName="phoneNumber" #phoneNumber [(ngModel)] = "contact.phoneNumber"/>
       </div>
       <div *ngIf="angForm.controls['phoneNumber'].invalid && (angForm.controls['phoneNumber'].dirty || angForm.controls['phoneNumber'].touched)" class="alert alert-danger">
         <div *ngIf="angForm.controls['phoneNumber'].errors.required">

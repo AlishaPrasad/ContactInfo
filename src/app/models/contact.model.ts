@@ -3,6 +3,6 @@ export class Contact {
     FirstName: string;
     LastName: string;
     Email: string;
-    PhoneNummber: string;
+    PhoneNumber: string;
     Status: string
 }
