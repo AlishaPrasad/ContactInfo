@@ -1,15 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpModule } from '@angular/http';
+import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
-import { IndexComponent } from './index/index.component';
-import { EditComponent } from './edit/edit.component';
-import { appRoutes } from './routerConfig';
-import { ContactService } from './contact.service';
+import { HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { AppComponent } from './app.component';
+import { ContactService } from './contact.service';
+import { EditComponent } from './edit/edit.component';
+import { IndexComponent } from './index/index.component';
+import { appRoutes } from './routerConfig';
 
 @NgModule({
   declarations: [

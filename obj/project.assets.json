@@ -12633,28 +12633,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hp\\.nuget\\packages\\": {},
+    "C:\\Users\\alisha.prasad\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "f:\\alisha\\AngularSample\\ContactInfo\\ContactInfo.csproj",
+      "projectUniqueName": "d:\\AngularSample\\ContactInfo\\ContactInfo.csproj",
       "projectName": "ContactInfo",
-      "projectPath": "f:\\alisha\\AngularSample\\ContactInfo\\ContactInfo.csproj",
-      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "f:\\alisha\\AngularSample\\ContactInfo\\obj\\",
+      "projectPath": "d:\\AngularSample\\ContactInfo\\ContactInfo.csproj",
+      "packagesPath": "C:\\Users\\alisha.prasad\\.nuget\\packages\\",
+      "outputPath": "d:\\AngularSample\\ContactInfo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\alisha.prasad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://prdch3bld05/Coyote.Nuget.Development/nuget": {},
+        "http://prdch3bld05/Coyote.Nuget/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

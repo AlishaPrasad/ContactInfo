@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ContactService } from '../contact.service';
 import { Contact } from '../models/contact.model';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-index',
-  templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css']
+  templateUrl: './index.component.html'
 })
 export class IndexComponent implements OnInit {
   contacts: Contact[];

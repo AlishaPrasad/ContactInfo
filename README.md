@@ -9,34 +9,16 @@ GENERAL USAGE NOTES
 
 Installation instructions
 --------------------------
-When installing My Contacts you need to install Angular CLI v6.0.3, Node v8.9.0 and above, NPM v6.1.0, .Net Core 2.0, SQL Server 2012
+- You need to install Angular CLI v6.0.3, Node v8.9.0 and above, NPM v6.1.0
+- You can use VS Code to run this project using 'ng serve' and then browse 'localhost:4200'
+- Make sure to change the URI in contact.service.ts
+- Make sure that the MyContacts project is running
 ---------------------------------------------------------------------------------------------------------
 
 My Contacts can be reached at:
 Web site: www.mycontacts.com
 
 =========================================================================================================
-Copyright 2010-2018 Example Corporation. All rights reserved.
-My Contacts and its use are subject to a licence agreement and are also subject to copyright, trademark, patent and/or other laws.
 
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# ContactInfo
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Copyright (c) 2018 AlishaPrasad. All rights reserved.
+My Contacts and its use are subject to MIT licence agreement and are also subject to copyright, trademark, patent and/or other laws.

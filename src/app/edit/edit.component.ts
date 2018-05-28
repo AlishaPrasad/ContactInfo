@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ContactService } from './../contact.service';
-import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
 import { Contact } from '../models/contact.model';
+import { ContactService } from './../contact.service';
 
 @Component({
-  selector: 'app-edit',
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css']
+  templateUrl: './edit.component.html'
 })
 export class EditComponent implements OnInit {
 
@@ -38,9 +36,13 @@ export class EditComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.contactService.editContact(params['id']).subscribe(res => {
-        this.contact = res;
-      });
+      if(params['id']) {
+        this.contactService.editContact(params['id']).subscribe(res => {
+          this.contact = res;
+        });
+      } else {
+        this.contact = new Contact();
+      }
     });
   }
 }
