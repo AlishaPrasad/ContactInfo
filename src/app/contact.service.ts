@@ -1,17 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { map } from "rxjs/operators";
+import { environment } from '../environments/environment';
 import { Contact } from './models/contact.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+    this.rootUri = environment.url
+  }
   contact: Contact;
-  
+  rootUri: string;
+
   getContactList() {
-    const uri = 'http://localhost:54460/api/contact';
+    const uri = this.rootUri + '/contact';
     return this.http.get(uri)
       .pipe(map((res: Response) => {
         return res.json()
@@ -19,7 +23,7 @@ export class ContactService {
   }
 
   editContact(contactId) {
-    const uri = 'http://localhost:54460/api/contact/' + contactId;
+    const uri = this.rootUri + '/contact/' + contactId;
     return this.http.get(uri)
       .pipe(map(res => {
         return res.json();
@@ -27,7 +31,7 @@ export class ContactService {
   }
 
   updateContact(contact) {
-    const uri = 'http://localhost:54460/api/contact';
+    const uri = this.rootUri + '/contact';
     return this.http.post(uri, contact)
       .pipe(map(res => {
         return res;
@@ -35,7 +39,7 @@ export class ContactService {
   }
 
   deleteContact(contactId) {
-    return this.http.delete('http://localhost:54460/api/contact/' + contactId)
+    return this.http.delete(this.rootUri + '/contact/' + contactId)
       .pipe(map(res => {
         return res;
       }));
