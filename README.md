@@ -11,12 +11,12 @@ Installation instructions
 --------------------------
 - You need to install Angular CLI v6.0.3, Node v8.9.0 and above, NPM v6.1.0
 - You can use VS Code to run this project using 'ng serve' and then browse 'localhost:4200'
-- Make sure to change the URI in contact.service.ts
+- Make sure to change the URI in environment.ts and environment.prod.ts
 - Make sure that the MyContacts project is running
 ---------------------------------------------------------------------------------------------------------
 
 My Contacts can be reached at:
-Web site: www.mycontacts.com
+Web site: https://alisha-contacts.azurewebsites.net
 
 =========================================================================================================
 
